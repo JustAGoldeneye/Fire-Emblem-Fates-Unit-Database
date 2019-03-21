@@ -3,13 +3,49 @@
 {% block body %}
   <table>
     <tr>
-      <th>Unit</th>
-      <th>Strength</th>
+        <th>Unit</th>
+        <th>Class</th>
+        <th>Level</th>
+        <th>HP</th>
+        <th>Strength</th>
+        <th>Magic</th>
+        <th>Skill</th>
+        <th>Speed</th>
+        <th>Luck</th>
+        <th>Defense</th>
+        <th>Resistance</th>
+        <th>Movement</th>
+        <th>HP Growth Rate</th>
+        <th>Strength Growth Rate</th>
+        <th>Magic Growth Rate</th>
+        <th>Skill Growth Rate</th>
+        <th>Speed Growth Rate</th>
+        <th>Luck Growth Rate</th>
+        <th>Defense Growth Rate</th>
+        <th>Resistance Growth Rate</th>
     </tr>
     {% for unit in units %}
     <tr>
       <td>{{ unit.name }}</td>
+      <td>{{ unit.classGP }}</td>
+      <td>{{ unit.level }}</td>
+      <td>{{ unit.hp }}</td>
       <td>{{ unit.strength }}</td>
+      <td>{{ unit.magic }}</td>
+      <td>{{ unit.skill }}</td>
+      <td>{{ unit.speed }}</td>
+      <td>{{ unit.luck }}</td>
+      <td>{{ unit.defense }}</td>
+      <td>{{ unit.resistance }}</td>
+      <td>{{ unit.movement }}</td>
+      <td>{{ unit.hpGrowth }}</td>
+      <td>{{ unit.strengthGrowth }}</td>
+      <td>{{ unit.magicGrowth }}</td>
+      <td>{{ unit.skillGrowth }}</td>
+      <td>{{ unit.speedGrowth }}</td>
+      <td>{{ unit.luckGrowth }}</td>
+      <td>{{ unit.defenseGrowth }}</td>
+      <td>{{ unit.resistanceGrowth }}</td>
     </tr>
     {% endfor %}
   </table>

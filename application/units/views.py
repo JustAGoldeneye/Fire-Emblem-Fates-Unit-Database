@@ -12,7 +12,7 @@ def units_form():
 
 @app.route("/units/", methods=["POST"])
 def units_create():
-    u = Unit(request.form.get('name'), request.form.get('strength'))
+    u = Unit(request.form.get('name'), request.form.get('classGP'), request.form.get('level'), request.form.get('hp'), request.form.get('strength'), request.form.get('magic'), request.form.get('skill'), request.form.get('speed'), request.form.get('luck'), request.form.get('defense'), request.form.get('resistance'), request.form.get('movement'), request.form.get('hpGrowth'), request.form.get('strengthGrowth'), request.form.get('magicGrowth'), request.form.get('skillGrowth'), request.form.get('speedGrowth'), request.form.get('luckGrowth'), request.form.get('defenseGrowth'), request.form.get('resistanceGrowth'))
 
     db.session().add(u)
     db.session().commit()
