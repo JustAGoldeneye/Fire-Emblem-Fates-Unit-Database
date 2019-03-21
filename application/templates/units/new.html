@@ -4,26 +4,9 @@
 <form method="POST" action="{{ url_for('units_create') }}">
   <table>
     <tr>
-      <th>Unit</th>
+      <th>Name</th>
       <th>Class</th>
       <th>Level</th>
-      <th>HP</th>
-      <th>Strength</th>
-      <th>Magic</th>
-      <th>Skill</th>
-      <th>Speed</th>
-      <th>Luck</th>
-      <th>Defense</th>
-      <th>Resistance</th>
-      <th>Movement</th>
-      <th>HP Growth Rate</th>
-      <th>Strength Growth Rate</th>
-      <th>Magic Growth Rate</th>
-      <th>Skill Growth Rate</th>
-      <th>Speed Growth Rate</th>
-      <th>Luck Growth Rate</th>
-      <th>Defense Growth Rate</th>
-      <th>Resistance Growth Rate</th>
     </tr>
     <tr>
       <td>
@@ -35,58 +18,83 @@
       <td>
           <input type="number" name="level"/>
       </td>
-      <td>
-          <input type="number" name="hp"/>
-      </td>
-      <td>
-        <input type="number" name="strength"/>
-      </td>
-      <td>
-          <input type="number" name="magic"/>
-      </td>
-      <td>
-          <input type="number" name="skill"/>
-      </td>
-      <td>
-          <input type="number" name="speed"/>
-      </td>
-      <td>
-          <input type="number" name="luck"/>
-      </td>
-      <td>
-          <input type="number" name="defense"/>
-      </td>
-      <td>
-          <input type="number" name="resistance"/>
-      </td>
-      <td>
-          <input type="number" name="movement"/>
-      </td>
-      <td>
-          <input type="number" name="hpGrowth"/>
-      </td>
-      <td>
-        <input type="number" name="strengthGrowth"/>
-      </td>
-      <td>
-          <input type="number" name="magicGrowth"/>
-      </td>
-      <td>
-          <input type="number" name="skillGrowth"/>
-      </td>
-      <td>
-          <input type="number" name="speedGrowth"/>
-      </td>
-      <td>
-          <input type="number" name="luckGrowth"/>
-      </td>
-      <td>
-          <input type="number" name="defenseGrowth"/>
-      </td>
-      <td>
-          <input type="number" name="resistanceGrowth"/>
-      </td>
     </tr>
+    <tr>
+      <th>HP</th>
+      <th>Strength</th>
+      <th>Magic</th>
+      <th>Skill</th>
+      <th>Speed</th>
+      <th>Luck</th>
+      <th>Defense</th>
+      <th>Resistance</th>
+      <th>Movement</th>
+      </tr>
+      <tr>
+        <td>
+            <input type="number" name="hp"/>
+        </td>
+        <td>
+          <input type="number" name="strength"/>
+        </td>
+        <td>
+            <input type="number" name="magic"/>
+        </td>
+        <td>
+            <input type="number" name="skill"/>
+        </td>
+        <td>
+            <input type="number" name="speed"/>
+        </td>
+        <td>
+            <input type="number" name="luck"/>
+        </td>
+        <td>
+            <input type="number" name="defense"/>
+        </td>
+        <td>
+            <input type="number" name="resistance"/>
+        </td>
+        <td>
+            <input type="number" name="movement"/>
+        </td>
+      </tr>
+      <tr>
+          <th>HP Growth Rate</th>
+          <th>Strength Growth Rate</th>
+          <th>Magic Growth Rate</th>
+          <th>Skill Growth Rate</th>
+          <th>Speed Growth Rate</th>
+          <th>Luck Growth Rate</th>
+          <th>Defense Growth Rate</th>
+          <th>Resistance Growth Rate</th>
+        </tr>
+        <tr>
+          <td>
+              <input type="number" name="hpGrowth"/>
+          </td>
+          <td>
+            <input type="number" name="strengthGrowth"/>
+          </td>
+          <td>
+              <input type="number" name="magicGrowth"/>
+          </td>
+          <td>
+              <input type="number" name="skillGrowth"/>
+          </td>
+          <td>
+              <input type="number" name="speedGrowth"/>
+          </td>
+          <td>
+              <input type="number" name="luckGrowth"/>
+          </td>
+          <td>
+              <input type="number" name="defenseGrowth"/>
+          </td>
+          <td>
+              <input type="number" name="resistanceGrowth"/>
+          </td>
+        </tr>
   </table>
   <input type="submit" value="Add a new unit"/>
 </form>
