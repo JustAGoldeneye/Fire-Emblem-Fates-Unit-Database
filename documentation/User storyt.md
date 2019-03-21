@@ -3,7 +3,7 @@
 ## Kirjautuminen
 * Ohjelmaan pitää voida kirjautua.
 * Rekisteröitymätön käyttäjä voi luoda uudet tunnukset (käyttäjänimi ja salasana).
- * Salasanan tallentaminen turvallisesti ei ole oleellista tämän projektin kannalta(?)
+  * Salasanan tallentaminen turvallisesti ei ole oleellista tämän projektin kannalta(?)
 * Ohjelmaan voitaisiin lisätä esimerkkitietokanta, jota voisi katsella ilman käyttäjätunnuksia, mutta tämä ei vielä alussa ole oleellisinta.
 
 ## Tavallinen käyttäjä
@@ -23,8 +23,8 @@
 
 ## Projektin kielet
 * Englanniksi
- * Koodi
- * Sovellus
- * Git commit -viestit
+  * Koodi
+  * Sovellus
+  * Git commit -viestit
 * Suomeksi
- * Dokumentaatio
+  * Dokumentaatio
