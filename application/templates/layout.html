@@ -6,10 +6,15 @@
   </head>
 
   <body>
+    <ul>
+      <li><a href="{{ url_for('units_index') }}">List Units</a></li>
+      <li><a href="{{ url_for('units_form') }}">Add a unit</a></li>
+    </ul>
+
     {% block body %}
-      <p>
-        Content.
-      </p>
+    <p>
+      Content.
+    </p>
     {% endblock %}
   </body>
 </html>

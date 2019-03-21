@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block body %}
+  <table>
+    <tr>
+      <th>Unit</th>
+    </tr>
+    {% for unit in units %}
+    <tr>
+      <td>{{ unit.name }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

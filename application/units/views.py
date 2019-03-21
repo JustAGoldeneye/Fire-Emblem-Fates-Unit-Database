@@ -1,6 +1,10 @@
 from application import app, db
-from flask import render_template, request
+from flask import redirect, render_template, request, url_for
 from application.units.models import Unit
+
+@app.route("/units", methods=["GET"])
+def units_index():
+    return render_template("units/list.html", units = Unit.query.all())
 
 @app.route("/units/new/")
 def units_form():
@@ -13,4 +17,4 @@ def units_create():
     db.session().add(u)
     db.session().commit()
 
-    return "hello world!"
+    return redirect(url_for("units_index"))
