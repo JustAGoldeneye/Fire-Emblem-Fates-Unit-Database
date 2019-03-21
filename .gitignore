@@ -1,7 +1,7 @@
 # The most important ones for this project
 # venv/ # included below
 # __pycache__/ # included below
-units.db
+# units.db # Included as an example
 .directory
 
 # Byte-compiled / optimized / DLL files
