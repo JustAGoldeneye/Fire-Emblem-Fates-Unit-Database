@@ -1,7 +1,9 @@
 # Fire Emblem Fates -hahmotietokanta
 
 [Heroku](https://fef-db-application.herokuapp.com/)
-[Tietokantakaaavio]()
+
+[Tietokantakaaavio](https://github.com/JustAGoldeneye/Fire-Emblem-Fates-Unit-Database/blob/master/documentation/Tietokantakaavio%20v1.png)
+
 [User storyt]()
 
 Laajan suunnitelman tietokantakaavio. Lopullinen työ on todennäköisesti suppeampi.
