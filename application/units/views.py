@@ -10,6 +10,15 @@ def units_index():
 def units_form():
     return render_template("units/new.html")
 
+@app.route("/units/<unit_id>/", methods=["POST"])
+def units_delete(unit_id):
+
+    u = Unit.query.get(unit_id)
+    db.session.delete(u)
+    db.session.commit()
+
+    return redirect(url_for("units_index"))
+
 @app.route("/units/", methods=["POST"])
 def units_create():
     u = Unit(request.form.get('name'), request.form.get('classGP'), request.form.get('level'), request.form.get('hp'), request.form.get('strength'), request.form.get('magic'), request.form.get('skill'), request.form.get('speed'), request.form.get('luck'), request.form.get('defense'), request.form.get('resistance'), request.form.get('movement'), request.form.get('hpGrowth'), request.form.get('strengthGrowth'), request.form.get('magicGrowth'), request.form.get('skillGrowth'), request.form.get('speedGrowth'), request.form.get('luckGrowth'), request.form.get('defenseGrowth'), request.form.get('resistanceGrowth'))

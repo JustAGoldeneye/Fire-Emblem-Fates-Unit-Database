@@ -46,6 +46,11 @@
       <td>{{ unit.luckGrowth }}</td>
       <td>{{ unit.defenseGrowth }}</td>
       <td>{{ unit.resistanceGrowth }}</td>
+      <td>
+        <form method="POST" action="{{ url_for('units_delete', unit_id=unit.id) }}">
+          <input type="submit" value="Delete"/>
+        </form>
+      </td>
     </tr>
     {% endfor %}
   </table>
