@@ -7,6 +7,8 @@ class Unit(db.Model):
     onupdate=db.func.current_timestamp())
 
     name = db.Column(db.String(144), nullable=False)
+    strength = db.Column(db.Integer, nullable=False)
 
-    def __init__(self, name):
+    def __init__(self, name, strength):
         self.name = name
+        self.strength = strength

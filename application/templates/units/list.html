@@ -4,10 +4,12 @@
   <table>
     <tr>
       <th>Unit</th>
+      <th>Strength</th>
     </tr>
     {% for unit in units %}
     <tr>
       <td>{{ unit.name }}</td>
+      <td>{{ unit.strength }}</td>
     </tr>
     {% endfor %}
   </table>
