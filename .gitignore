@@ -1,7 +1,7 @@
 # The most important ones for this project
 # venv/ # included below
 # __pycache__/ # included below
-# units.db # currently in Git as an example database
+units.db
 .directory
 
 # Byte-compiled / optimized / DLL files
