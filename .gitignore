@@ -3,6 +3,7 @@
 # __pycache__/ # included below
 # units.db # Included as an example
 .directory
+*.kate-swp
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

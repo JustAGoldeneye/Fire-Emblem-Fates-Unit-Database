@@ -2,11 +2,14 @@
 
 **Huomiot**
 
+Toivoisin, että käyttäisitte arvostelussa tätä versiota, vaikka se on palautettu määräajan jälkeen. Unohdin tallentaa, muutokset README:hen ennen 23.59 commitia, joten siitä vain puuttuu hieman tekstiä. Lisäksi tuohon palautukseen pääsi vahongossa mukaan tekstieditorini väliaikaistiedosto, README.md.kate-swp, joka ei ole tässä versiossa. Mitään muutoksia koodiin tai varsinaiseen dokumentaation ei tässä versiossa ajallaan palautettuun verrattuna ole.
+
 Unit-taulun on tarkoitus olla sama kaikille käyttäjille.
 
 En onnistunut saamaan tietokannan tietojen päivttämistä ja uusien käyttäjätunnusten luomista sovelluksen kautta toimimaan.
 
 ## Käyttäjätunnus ja salasana:
+Voit kirjautua sisään näillä tunnuksilla.
 
 tetstiAdmin
 
