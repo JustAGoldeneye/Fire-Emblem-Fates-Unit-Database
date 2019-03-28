@@ -1,5 +1,9 @@
 # Fire Emblem Fates -hahmotietokanta
 
+**Huomiot**
+
+Unit-taulun kuuluu olla sama kaikille käyttäjille.
+
 En onnistunut saamaan tietokannan tietojen päivttämistä ja uusien käyttäjätunnusten luomista sovelluksen kautta toimimaan.
 
 ## Käyttäjätunnus ja salasana:
@@ -7,6 +11,8 @@ En onnistunut saamaan tietokannan tietojen päivttämistä ja uusien käyttäjä
 tetstiAdmin
 
 salsana
+
+## Linkit
 
 [Heroku](https://fef-db-application.herokuapp.com/)
 
