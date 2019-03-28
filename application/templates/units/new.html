@@ -20,6 +20,29 @@
       </td>
     </tr>
     <tr>
+      <td>
+        <ul>
+            {% for error in form.name.errors %}
+            <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+      </td>
+      <td>
+          <ul>
+              {% for error in form.classGP.errors %}
+              <li>{{ error }}</li>
+              {% endfor %}
+          </ul>
+        </td>
+        <td>
+            <ul>
+                {% for error in form.level.errors %}
+                <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+          </td>
+    </tr>
+    <tr>
       <th>{{ form.hp.label }}</th>
       <th>{{ form.strength.label }}</th>
       <th>{{ form.magic.label }}</th>
@@ -60,6 +83,71 @@
         </td>
       </tr>
       <tr>
+          <td>
+              <ul>
+                  {% for error in form.hp.errors %}
+                  <li>{{ error }}</li>
+                  {% endfor %}
+              </ul>
+            </td>
+          <td>
+              <ul>
+                  {% for error in form.strength.errors %}
+                  <li>{{ error }}</li>
+                  {% endfor %}
+              </ul>
+            </td>
+            <td>
+                <ul>
+                    {% for error in form.magic.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    {% for error in form.skill.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    {% for error in form.speed.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    {% for error in form.luck.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    {% for error in form.defense.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    {% for error in form.resistance.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    {% for error in form.movement.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+              </td>
+      </tr>
+      <tr>
           <th>{{ form.hpGrowth.label }}</th>
           <th>{{ form.strengthGrowth.label }}</th>
           <th>{{ form.magicGrowth.label }}</th>
@@ -94,6 +182,64 @@
             <td>
                 {{ form.resistanceGrowth }}
             </td>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    {% for error in form.hpGrowth.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+              </td>
+            <td>
+                <ul>
+                    {% for error in form.strengthGrowth.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+              </td>
+              <td>
+                  <ul>
+                      {% for error in form.magicGrowth.errors %}
+                      <li>{{ error }}</li>
+                      {% endfor %}
+                  </ul>
+              </td>
+              <td>
+                  <ul>
+                      {% for error in form.skillGrowth.errors %}
+                      <li>{{ error }}</li>
+                      {% endfor %}
+                  </ul>
+              </td>
+              <td>
+                  <ul>
+                      {% for error in form.speedGrowth.errors %}
+                      <li>{{ error }}</li>
+                      {% endfor %}
+                  </ul>
+              </td>
+              <td>
+                  <ul>
+                      {% for error in form.luckGrowth.errors %}
+                      <li>{{ error }}</li>
+                      {% endfor %}
+                  </ul>
+              </td>
+              <td>
+                  <ul>
+                      {% for error in form.defenseGrowth.errors %}
+                      <li>{{ error }}</li>
+                      {% endfor %}
+                  </ul>
+              </td>
+              <td>
+                  <ul>
+                      {% for error in form.resistanceGrowth.errors %}
+                      <li>{{ error }}</li>
+                      {% endfor %}
+                  </ul>
+              </td>
         </tr>
   </table>
   <input type="submit" value="Add a new unit"/>
