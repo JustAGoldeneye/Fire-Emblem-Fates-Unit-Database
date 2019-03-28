@@ -10,7 +10,7 @@ En onnistunut saamaan tietokannan tietojen päivttämistä ja uusien käyttäjä
 
 tetstiAdmin
 
-salsana
+salasana
 
 ## Linkit
 
