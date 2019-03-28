@@ -4,96 +4,96 @@
 <form method="POST" action="{{ url_for('units_create') }}">
   <table>
     <tr>
-      <th>Name</th>
-      <th>Class</th>
-      <th>Level</th>
+      <th>{{ form.name.label }}</th>
+      <th>{{ form.classGP.label }}</th>
+      <th>{{ form.level.label }}</th>
     </tr>
     <tr>
       <td>
-        <input type="text" name="name"/>
+          {{ form.name }}
       </td>
       <td>
-          <input type="text" name="classGP"/>
+          {{ form.classGP }}
       </td>
       <td>
-          <input type="number" name="level"/>
+          {{ form.level }}
       </td>
     </tr>
     <tr>
-      <th>HP</th>
-      <th>Strength</th>
-      <th>Magic</th>
-      <th>Skill</th>
-      <th>Speed</th>
-      <th>Luck</th>
-      <th>Defense</th>
-      <th>Resistance</th>
-      <th>Movement</th>
+      <th>{{ form.hp.label }}</th>
+      <th>{{ form.strength.label }}</th>
+      <th>{{ form.magic.label }}</th>
+      <th>{{ form.skill.label }}</th>
+      <th>{{ form.speed.label }}</th>
+      <th>{{ form.luck.label }}</th>
+      <th>{{ form.defense.label }}</th>
+      <th>{{ form.resistance.label }}</th>
+      <th>{{ form.movement.label }}</th>
       </tr>
       <tr>
         <td>
-            <input type="number" name="hp"/>
+            {{ form.hp }}
         </td>
         <td>
-          <input type="number" name="strength"/>
+            {{ form.strength }}
         </td>
         <td>
-            <input type="number" name="magic"/>
+            {{ form.magic }}
         </td>
         <td>
-            <input type="number" name="skill"/>
+            {{ form.skill }}
         </td>
         <td>
-            <input type="number" name="speed"/>
+            {{ form.speed }}
         </td>
         <td>
-            <input type="number" name="luck"/>
+            {{ form.luck }}
         </td>
         <td>
-            <input type="number" name="defense"/>
+            {{ form.defense }}
         </td>
         <td>
-            <input type="number" name="resistance"/>
+            {{ form.resistance }}
         </td>
         <td>
-            <input type="number" name="movement"/>
+            {{ form.movement }}
         </td>
       </tr>
       <tr>
-          <th>HP Growth Rate</th>
-          <th>Strength Growth Rate</th>
-          <th>Magic Growth Rate</th>
-          <th>Skill Growth Rate</th>
-          <th>Speed Growth Rate</th>
-          <th>Luck Growth Rate</th>
-          <th>Defense Growth Rate</th>
-          <th>Resistance Growth Rate</th>
+          <th>{{ form.hpGrowth.label }}</th>
+          <th>{{ form.strengthGrowth.label }}</th>
+          <th>{{ form.magicGrowth.label }}</th>
+          <th>{{ form.skillGrowth.label }}</th>
+          <th>{{ form.speedGrowth.label }}</th>
+          <th>{{ form.luckGrowth.label }}</th>
+          <th>{{ form.defenseGrowth.label }}</th>
+          <th>{{ form.resistanceGrowth.label }}</th>
         </tr>
         <tr>
-          <td>
-              <input type="number" name="hpGrowth"/>
-          </td>
-          <td>
-            <input type="number" name="strengthGrowth"/>
-          </td>
-          <td>
-              <input type="number" name="magicGrowth"/>
-          </td>
-          <td>
-              <input type="number" name="skillGrowth"/>
-          </td>
-          <td>
-              <input type="number" name="speedGrowth"/>
-          </td>
-          <td>
-              <input type="number" name="luckGrowth"/>
-          </td>
-          <td>
-              <input type="number" name="defenseGrowth"/>
-          </td>
-          <td>
-              <input type="number" name="resistanceGrowth"/>
-          </td>
+            <td>
+                {{ form.hpGrowth }}
+            </td>
+            <td>
+                {{ form.strengthGrowth }}
+            </td>
+            <td>
+                {{ form.magicGrowth }}
+            </td>
+            <td>
+                {{ form.skillGrowth }}
+            </td>
+            <td>
+                {{ form.speedGrowth }}
+            </td>
+            <td>
+                {{ form.luckGrowth }}
+            </td>
+            <td>
+                {{ form.defenseGrowth }}
+            </td>
+            <td>
+                {{ form.resistanceGrowth }}
+            </td>
         </tr>
   </table>
   <input type="submit" value="Add a new unit"/>

@@ -1,6 +1,7 @@
 from application import app, db
 from flask import redirect, render_template, request, url_for
 from application.units.models import Unit
+from application.units.forms import UnitForm
 
 @app.route("/units", methods=["GET"])
 def units_index():
@@ -8,7 +9,7 @@ def units_index():
 
 @app.route("/units/new/")
 def units_form():
-    return render_template("units/new.html")
+    return render_template("units/new.html", form = UnitForm())
 
 @app.route("/units/<unit_id>/", methods=["POST"])
 def units_delete(unit_id):
