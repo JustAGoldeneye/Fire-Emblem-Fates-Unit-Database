@@ -12,6 +12,7 @@
       </p>
       {% else %}
       <a href="{{ url_for('auth_login') }}">Login</a>
+      <!--<a href="{{ url_for('users_form') }}">Register</a>-->
       {% endif %}
       {% if current_user.get_administrator %}
       <p>
@@ -25,7 +26,7 @@
       <li><a href="{{ url_for('units_form') }}">Add a unit</a></li>
     </ul>
     {% endif %}
-    
+
     {% block body %}
     <p>
       Content.

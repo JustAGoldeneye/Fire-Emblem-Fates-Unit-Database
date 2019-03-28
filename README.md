@@ -1,5 +1,11 @@
 # Fire Emblem Fates -hahmotietokanta
 
+En onnistunut saamaan tietokannan tietojen päivttämistä ja uusien käyttäjätunnusten luomista sovelluksen kautta toimimaan.
+
+Käyttäjätunnu ja salasana:
+tetstiAdmin
+salsana
+
 [Heroku](https://fef-db-application.herokuapp.com/)
 
 [Tietokantakaaavio](https://github.com/JustAGoldeneye/Fire-Emblem-Fates-Unit-Database/blob/master/documentation/Tietokantakaavio%20v1.png) (Laajan suunnitelman tietokantakaavio. Lopullinen työ on todennäköisesti suppeampi.)
