@@ -12,8 +12,8 @@ def units_form():
 
 @app.route("/units/<unit_id>/", methods=["POST"])
 def units_delete(unit_id):
-
     u = Unit.query.get(unit_id)
+
     db.session.delete(u)
     db.session.commit()
 
