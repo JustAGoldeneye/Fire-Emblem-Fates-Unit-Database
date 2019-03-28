@@ -6,6 +6,19 @@
   </head>
 
   <body>
+      {% if current_user.is_authenticated %}
+      <p>
+	      Logged in as {{ current_user.username }} <a href="{{ url_for('auth_logout') }}">Log out</a>
+      </p>
+      {% else %}
+      <a href="{{ url_for('auth_login') }}">Login</a>
+      {% endif %}
+      {% if current_user.get_administrator %}
+      <p>
+        ADMINISTRATOR
+      </p>
+      {% endif %}
+
     <ul>
       <li><a href="{{ url_for('units_index') }}">List Units</a></li>
       <li><a href="{{ url_for('units_form') }}">Add a unit</a></li>
