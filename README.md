@@ -2,7 +2,7 @@
 
 **Huomiot**
 
-Unit-taulun kuuluu olla sama kaikille käyttäjille.
+Unit-taulun on tarkoitus olla sama kaikille käyttäjille.
 
 En onnistunut saamaan tietokannan tietojen päivttämistä ja uusien käyttäjätunnusten luomista sovelluksen kautta toimimaan.
 
