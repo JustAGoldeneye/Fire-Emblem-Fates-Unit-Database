@@ -22,7 +22,9 @@ def units_delete(unit_id):
 
 @app.route("/units/", methods=["POST"])
 def units_create():
-    u = Unit(request.form.get('name'), request.form.get('classGP'), request.form.get('level'), request.form.get('hp'), request.form.get('strength'), request.form.get('magic'), request.form.get('skill'), request.form.get('speed'), request.form.get('luck'), request.form.get('defense'), request.form.get('resistance'), request.form.get('movement'), request.form.get('hpGrowth'), request.form.get('strengthGrowth'), request.form.get('magicGrowth'), request.form.get('skillGrowth'), request.form.get('speedGrowth'), request.form.get('luckGrowth'), request.form.get('defenseGrowth'), request.form.get('resistanceGrowth'))
+    form = UnitForm(request.form)
+
+    u = Unit(form.name.data, form.classGP.data, form.level.data, form.hp.data, form.strength.data, form.magic.data, form.skill.data, form.speed.data, form.luck.data, form.defense.data, form.resistance.data, form.movement.data, form.hpGrowth.data, form.strengthGrowth.data, form.magicGrowth.data, form.skillGrowth.data, form.speedGrowth.data, form.luckGrowth.data, form.defenseGrowth.data, form.resistanceGrowth.data)
 
     if int(u.level) >= 1 and int(u.hp) >= 1 and int(u.strength) >= 0 and int(u.magic) >= 0 and int(u.skill) >= 0 and int(u.speed) >= 0 and int(u.luck) >= 0 and int(u.defense) >= 0 and int(u.resistance) >= 0 and int(u.movement) >= 0:
         db.session().add(u)
