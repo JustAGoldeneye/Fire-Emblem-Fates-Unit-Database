@@ -1,6 +1,12 @@
 {% extends "layout.html" %}
 
 {% block body %}
+{% if current_user.is_authenticated %}
   <p>Click "List units" to see the list of the added units.</p>
-  <p>Click "Add a unit" to add a new unit to the database.</p>
+{% else %}
+  <p>You must login to use the database</p>
+{% endif %}
+{% if current_user.get_administrator %}
+ <p>Click "Add a unit" to add a new unit to the database.</p>
+{% endif %}
 {% endblock %}

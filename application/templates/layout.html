@@ -19,11 +19,13 @@
       </p>
       {% endif %}
 
+      {% if current_user.is_authenticated %}
     <ul>
       <li><a href="{{ url_for('units_index') }}">List Units</a></li>
       <li><a href="{{ url_for('units_form') }}">Add a unit</a></li>
     </ul>
-
+    {% endif %}
+    
     {% block body %}
     <p>
       Content.
