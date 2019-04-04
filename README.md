@@ -11,7 +11,7 @@ Ominaisuudet, joita en vielä saanut toimimaan:
 * Käyttjätunnusten luominen ohjelman kautta
 
 ## Käyttäjätunnus ja salasana:
-Voit kirjautua sisään näillä tunnuksilla.
+Voit kirjautua sisään näillä tunnuksilla:
 
 tetstiAdmin
 
