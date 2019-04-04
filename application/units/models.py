@@ -1,11 +1,7 @@
 from application import db
+from application.models import Base
 
-class Unit(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    date_created = db.Column(db.DateTime, default=db.func.current_timestamp())
-    date_modified = db.Column(db.DateTime, default=db.func.current_timestamp(),
-    onupdate=db.func.current_timestamp())
-
+class Unit(Base):
     name = db.Column(db.String(144), nullable=False)
     classGP = db.Column(db.String(144), nullable=False) #GP = gameplay, The name is meant to reduce ambiguity between game terms and programming terms.
     level = db.Column(db.Integer, nullable=False)
