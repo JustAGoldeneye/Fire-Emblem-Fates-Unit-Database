@@ -1,7 +1,7 @@
 # The most important ones for this project
 # venv/ # included below
 # __pycache__/ # included below
-# units.db # Included as an example
+units.db # Included as an example
 .directory
 *.kate-swp
 
