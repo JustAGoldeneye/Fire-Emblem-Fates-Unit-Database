@@ -2,6 +2,7 @@
   
 {% block body %}
   <table>
+      <h1>Edit</h1>
     {% for unit in units %}
     <form method="POST" action="{{ url_for('units_edit', unit_id=unit.id) }}">
     <tr>

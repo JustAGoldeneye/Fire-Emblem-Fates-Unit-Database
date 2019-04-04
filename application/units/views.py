@@ -7,7 +7,7 @@ from application.units.forms import UnitForm
 @app.route("/units", methods=["GET"])
 @login_required
 def units_index():
-    return render_template("units/list.html", units = Unit.query.all())
+    return render_template("units/list.html", units = Unit.query.all(), number_of_units=Unit.number_of_units())
 
 @app.route("/units/new/")
 @login_required

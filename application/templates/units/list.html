@@ -2,6 +2,11 @@
 
 {% block body %}
   <table>
+    <h1>Units</h1>
+    {% if number_of_units is defined %}
+    <p>{{number_of_units}} units in the database</p>
+    <p></p>
+    {% endif %}
     <tr>
         <th>Name</th>
         <th>Class</th>

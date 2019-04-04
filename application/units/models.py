@@ -1,6 +1,8 @@
 from application import db
 from application.models import Base
 
+from sqlalchemy.sql import text
+
 class Unit(Base):
     name = db.Column(db.String(144), nullable=False)
     classGP = db.Column(db.String(144), nullable=False) #GP = gameplay, The name is meant to reduce ambiguity between game terms and programming terms.
@@ -48,3 +50,12 @@ class Unit(Base):
         self.luckGrowth = luckGrowth
         self.defenseGrowth = defenseGrowth
         self.resistanceGrowth = resistanceGrowth
+    
+    @staticmethod
+    def number_of_units():
+        stmt = text("SELECT COUNT(Unit.id) FROM Unit")
+        res = db.engine.execute(stmt)
+
+        for row in res:
+            return row[0]
+
