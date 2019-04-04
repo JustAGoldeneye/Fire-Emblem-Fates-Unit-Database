@@ -47,6 +47,11 @@
       <td>{{ unit.defenseGrowth }}</td>
       <td>{{ unit.resistanceGrowth }}</td>
       <td>
+        <form method="GET" action="{{ url_for('units_editForm', unit_id=unit.id) }}">
+            <input type="submit" value="Edit"/>
+          </form>
+      </td>
+      <td>
         <form method="POST" action="{{ url_for('units_delete', unit_id=unit.id) }}">
           <input type="submit" value="Delete"/>
         </form>
