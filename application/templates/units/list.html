@@ -5,7 +5,6 @@
     <h1>Units</h1>
     {% if number_of_units is defined %}
     <p>{{number_of_units}} units in the database</p>
-    <p></p>
     {% endif %}
     <tr>
         <th>Name</th>
@@ -63,5 +62,80 @@
       </td>
     </tr>
     {% endfor %}
+    </table>
+    <h2>Best units in different stats</h2>
+    <table>
+    <tr>
+      <th>Level</th>
+      <td>{{best_unit_in_level}}</td>
+    </tr>
+    <tr>
+      <th>HP</th>
+      <td>{{best_unit_in_hp}}</td>
+    </tr>
+    <tr>
+      <th>Strength</th>
+      <td>{{best_unit_in_strength}}</td>
+    </tr>
+    <tr>
+      <th>Magic</th>
+      <td>{{best_unit_in_magic}}</td>
+    </tr>
+    <tr>
+      <th>Skill</th>
+      <td>{{best_unit_in_skill}}</td>
+    </tr>
+    <tr>
+      <th>Speed</th>
+      <td>{{best_unit_in_speed}}</td>
+    </tr>
+    <tr>
+      <th>Luck</th>
+      <td>{{best_unit_in_luck}}</td>
+    </tr>
+    <tr>
+      <th>Defense</th>
+      <td>{{best_unit_in_defense}}</td>
+    </tr>
+    <tr>
+      <th>Resistance</th>
+      <td>{{best_unit_in_resistance}}</td>
+    </tr>
+    <tr>
+      <th>Movement</th>
+      <td>{{best_unit_in_movement}}</td>
+    </tr>
+    <tr>
+      <th>HP Growth Rate %</th>
+      <td>{{best_unit_in_hpGrowth}}</td>
+    </tr>
+    <tr>
+      <th>Strength Growth Rate %</th>
+      <td>{{best_unit_in_strengthGrowth}}</td>
+    </tr>
+    <tr>
+      <th>Magic Growth Rate %</th>
+      <td>{{best_unit_in_magicGrowth}}</td>
+    </tr>
+    <tr>
+      <th>Skill Growth Rate %</th>
+      <td>{{best_unit_in_skillGrowth}}</td>
+    </tr>
+    <tr>
+      <th>Speed Growth Rate %</th>
+      <td>{{best_unit_in_speedGrowth}}</td>
+    </tr>
+    <tr>
+      <th>Luck Growth Rate %</th>
+      <td>{{best_unit_in_luckGrowth}}</td>
+    </tr>
+    <tr>
+      <th>Defense Growth Rate %</th>
+      <td>{{best_unit_in_defenseGrowth}}</td>
+    </tr>
+    <tr>
+      <th>Resistance Growth Rate %</th>
+      <td>{{best_unit_in_resistanceGrowth}}</td>
+    </tr>
   </table>
 {% endblock %}

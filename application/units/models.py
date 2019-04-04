@@ -53,7 +53,161 @@ class Unit(Base):
     
     @staticmethod
     def number_of_units():
-        stmt = text("SELECT COUNT(Unit.id) FROM Unit")
+        stmt = text("SELECT COUNT(id) FROM Unit")
+        res = db.engine.execute(stmt)
+
+        for row in res:
+            return row[0]
+
+    #@staticmethod
+    #def best_unit_in(stat):
+        #stmt = text("SELECT name FROM Unit WHERE :stat = (SELECT MAX(:stat) FROM Unit)").params(stat=stat)
+        #res = db.engine.execute(stmt)
+
+        #for row in res:
+            #return row[0]
+
+    # I had to divide my original plan into seperate methods because calling above method several times in one render_template() caused "Too many positional arguments for staticmethod call" error.
+
+    @staticmethod
+    def best_unit_in_level():
+        stmt = text("SELECT name FROM Unit WHERE level = (SELECT MAX(level) FROM Unit)")
+        res = db.engine.execute(stmt)
+
+        for row in res:
+            return row[0]
+
+    @staticmethod
+    def best_unit_in_hp():
+        stmt = text("SELECT name FROM Unit WHERE hp = (SELECT MAX(hp) FROM Unit)")
+        res = db.engine.execute(stmt)
+
+        for row in res:
+            return row[0]
+
+    @staticmethod
+    def best_unit_in_strength():
+        stmt = text("SELECT name FROM Unit WHERE strength = (SELECT MAX(strength) FROM Unit)")
+        res = db.engine.execute(stmt)
+
+        for row in res:
+            return row[0]
+
+    @staticmethod
+    def best_unit_in_magic():
+        stmt = text("SELECT name FROM Unit WHERE magic = (SELECT MAX(magic) FROM Unit)")
+        res = db.engine.execute(stmt)
+
+        for row in res:
+            return row[0]
+
+    @staticmethod
+    def best_unit_in_skill():
+        stmt = text("SELECT name FROM Unit WHERE skill = (SELECT MAX(skill) FROM Unit)")
+        res = db.engine.execute(stmt)
+
+        for row in res:
+            return row[0]
+
+    @staticmethod
+    def best_unit_in_speed():
+        stmt = text("SELECT name FROM Unit WHERE speed = (SELECT MAX(speed) FROM Unit)")
+        res = db.engine.execute(stmt)
+
+        for row in res:
+            return row[0]
+
+    @staticmethod
+    def best_unit_in_luck():
+        stmt = text("SELECT name FROM Unit WHERE luck = (SELECT MAX(luck) FROM Unit)")
+        res = db.engine.execute(stmt)
+
+        for row in res:
+            return row[0]
+
+    @staticmethod
+    def best_unit_in_defense():
+        stmt = text("SELECT name FROM Unit WHERE defense = (SELECT MAX(defense) FROM Unit)")
+        res = db.engine.execute(stmt)
+
+        for row in res:
+            return row[0]
+
+    @staticmethod
+    def best_unit_in_resistance():
+        stmt = text("SELECT name FROM Unit WHERE resistance = (SELECT MAX(resistance) FROM Unit)")
+        res = db.engine.execute(stmt)
+
+        for row in res:
+            return row[0]
+
+    @staticmethod
+    def best_unit_in_movement():
+        stmt = text("SELECT name FROM Unit WHERE movement = (SELECT MAX(movement) FROM Unit)")
+        res = db.engine.execute(stmt)
+
+        for row in res:
+            return row[0]
+
+    @staticmethod
+    def best_unit_in_hpGrowth():
+        stmt = text("SELECT name FROM Unit WHERE hpGrowth = (SELECT MAX(hpGrowth) FROM Unit)")
+        res = db.engine.execute(stmt)
+
+        for row in res:
+            return row[0]
+
+    @staticmethod
+    def best_unit_in_strengthGrowth():
+        stmt = text("SELECT name FROM Unit WHERE strengthGrowth = (SELECT MAX(strengthGrowth) FROM Unit)")
+        res = db.engine.execute(stmt)
+
+        for row in res:
+            return row[0]
+
+    @staticmethod
+    def best_unit_in_magicGrowth():
+        stmt = text("SELECT name FROM Unit WHERE magicGrowth = (SELECT MAX(magicGrowth) FROM Unit)")
+        res = db.engine.execute(stmt)
+
+        for row in res:
+            return row[0]
+
+    @staticmethod
+    def best_unit_in_skillGrowth():
+        stmt = text("SELECT name FROM Unit WHERE skillGrowth = (SELECT MAX(skillGrowth) FROM Unit)")
+        res = db.engine.execute(stmt)
+
+        for row in res:
+            return row[0]
+
+    @staticmethod
+    def best_unit_in_speedGrowth():
+        stmt = text("SELECT name FROM Unit WHERE speedGrowth = (SELECT MAX(speedGrowth) FROM Unit)")
+        res = db.engine.execute(stmt)
+
+        for row in res:
+            return row[0]
+
+    @staticmethod
+    def best_unit_in_luckGrowth():
+        stmt = text("SELECT name FROM Unit WHERE luckGrowth = (SELECT MAX(luckGrowth) FROM Unit)")
+        res = db.engine.execute(stmt)
+
+        for row in res:
+            return row[0]
+
+    @staticmethod
+    def best_unit_in_defenseGrowth():
+        stmt = text("SELECT name FROM Unit WHERE defenseGrowth = (SELECT MAX(defenseGrowth) FROM Unit)")
+        res = db.engine.execute(stmt)
+
+        for row in res:
+            return row[0]
+
+    @staticmethod
+    def best_unit_in_resistanceGrowth():
+        stmt = text("SELECT name FROM Unit WHERE resistanceGrowth = (SELECT MAX(resistanceGrowth) FROM Unit)")
         res = db.engine.execute(stmt)
 
         for row in res:
