@@ -25,5 +25,8 @@ class User(Base):
     def is_authenticated(self):
         return True
 
-    def roles(self):
+    def roles(self): #unfinished
         return ["ADMIN"]
+
+    def is_admin(self): #unfinished
+        return True

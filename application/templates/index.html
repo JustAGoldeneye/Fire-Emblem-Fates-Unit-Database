@@ -1,12 +1,13 @@
 {% extends "layout.html" %}
 
 {% block body %}
-{% if current_user.is_authenticated %}
-  <p>Click "Units" to see the list of the added units.</p>
-{% else %}
-  <p>You must login to use the database</p>
-{% endif %}
-{% if current_user.get_administrator %}
- <p>Click "Add a unit" to add a new unit to the database.</p>
-{% endif %}
-{% endblock %}
+  <p>Open the menu and...</p>
+  <p style="text-indent: 40px">click "Units" to see the list of the added units.</p>
+  {% if current_user.is_authenticated %}
+    {% if current_user.is_admin %}
+      <p style="text-indent: 40px">click "Add a unit" to add a new unit to the database.</p>
+    {% endif %}
+  {% else %}
+    <b>You must login to edit the database.</b>
+  {% endif %}
+  {% endblock %}
