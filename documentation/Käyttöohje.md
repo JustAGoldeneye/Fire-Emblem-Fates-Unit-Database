@@ -30,8 +30,8 @@ Klikkaamalla tästä pääset sivulle, josta voit lisätä uudeen unitin syött�
 
 ### Delete
 
-Delete-painike poistaa unitin, jonka yhteydessä painike on.
+*Delete*-painike poistaa unitin, jonka yhteydessä painike on.
 
 ### Edit
 
-(Tämä ominaisuus on vielä kesken.)
+(Tämä ominaisuuden toteutus on vielä kesken.)
