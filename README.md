@@ -14,7 +14,7 @@ Ominaisuudet, joita en vielä saanut toimimaan:
 
 Unitit listaava sivu on nähtävissä ilman kirjautumista.
 
-### Voit **luoda uudet tunnukset** tai kirjautua sisään näillä:
+Voit **luoda uudet tunnukset** tai kirjautua sisään näillä:
 
 tetstiAdmin
 
