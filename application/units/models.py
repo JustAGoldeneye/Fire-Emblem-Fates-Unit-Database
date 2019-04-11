@@ -151,7 +151,7 @@ class Unit(Base):
 
     @staticmethod
     def best_unit_in_hpGrowth():
-        stmt = text("SELECT Unit.name FROM Unit WHERE Unit.hpGrowth = (SELECT MAX(Unit.hpGrowth) FROM Unit)")
+        stmt = text("SELECT Unit.name FROM Unit WHERE unit.hpGrowth = (SELECT MAX(unit.hpGrowth) FROM Unit)")
         res = db.engine.execute(stmt)
 
         for row in res:
