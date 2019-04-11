@@ -17,7 +17,7 @@ def units_form():
 @app.route("/units/edit/", methods=["GET"])
 @login_required
 def units_editForm():
-    return render_template("units/edit.html", units = Unit.query.filter_by(id=2), form = UnitForm()) # muokkaa
+    return render_template("units/edit.html", units = Unit.query.filter_by(id=2), form = UnitForm()) #muokkaa
 
 @app.route("/units/<unit_id>/", methods=["POST"])
 @login_required
