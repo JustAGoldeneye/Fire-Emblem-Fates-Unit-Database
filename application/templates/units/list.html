@@ -5,7 +5,8 @@
     <h1>Units</h1>
   {% if current_user.is_authenticated %}
     {% if current_user.is_admin %}
-      <b>This table is PUBLIC. The edits made here will show up to everyone.&nbsp;</b>
+      <b>This table is PUBLIC. The edits made here will show up to everyone.</b>
+      <p></p>
       <a href="{{ url_for('units_form') }} ">Add a unit</a>
     {% else %}
       <b>This table is PUBLIC.</b>
