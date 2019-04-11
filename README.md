@@ -5,15 +5,16 @@
 Unit-taulun on tarkoitus olla sama kaikille käyttäjille.
 
 Ominaisuudet, joita en vielä saanut toimimaan:
-* Heroku antaa Internal Server Errorin, kun sovelluksen Unit-taulua yrittää käyttää. Olen (melko) varma, että tätä ongelmaa ei ollut viime viikolla, edes PGSQL:n käyttöönoton jälkeen.
-  * Huomasin asian vasta puoli tuntia ennen palautusaikaa, enkä kerennyt korjata sitä. Tietojen muutokset kuitenkin päivittyvät tietokantaan errorista huolimatta.
 * Unit-taulun kohteiden päivttäminen
-  * Edit-painike ja -sivu ovat silti mukana sovelluksessa. Tällä hetkellä kohteen tietojen päivittäminen jostain syystä, poistaa muokattavan rivin.
+  * Sain Koodikatselmoinnista saamastani palautteesta todennäköisen ratkaisun ongelmaan. En ole vain vielä kerennyt tehdä sitä.
+  * Edit-painike ja -sivu ovat silti mukana sovelluksessa. Tällä hetkellä kohteen tietojen päivittäminen poistaa muokattavan rivin.
   * Unitien lisääminen ja poistaminen kuitenkin toimivat.
-* Käyttjätunnusten luominen ohjelman kautta
 
 ## Kirjautuminen:
-Voit **luoda uudet tunnukset** tai kirjautua sisään näillä:
+
+Unitit listaava sivu on nähtävissä ilman kirjautumista.
+
+### Voit **luoda uudet tunnukset** tai kirjautua sisään näillä:
 
 tetstiAdmin
 
