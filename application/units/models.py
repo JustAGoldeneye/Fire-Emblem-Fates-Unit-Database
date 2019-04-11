@@ -175,7 +175,7 @@ class Unit(Base):
 
     @staticmethod
     def best_unit_in_skillGrowth():
-        stmt = text("SELECT Unit.name FROM Unit WHERE Unit.\"skillGrowth\" = (SELECT MAX(Unit.\"skillGrowth\" FROM Unit)")
+        stmt = text("SELECT Unit.name FROM Unit WHERE Unit.\"skillGrowth\" = (SELECT MAX(Unit.\"skillGrowth\") FROM Unit)")
         res = db.engine.execute(stmt)
 
         for row in res:
