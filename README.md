@@ -5,7 +5,8 @@
 Unit-taulun on tarkoitus olla sama kaikille käyttäjille.
 
 Ominaisuudet, joita en vielä saanut toimimaan:
-* Unit-taulun kohteiden päivttäminen
+* Käytin tällä kertaa ajan paljolti ongelmien korjaamiseen, joten en niin kerennyt keskittyä uusiin ominaisuuksiin.
+* Unit-taulun kohteiden päivttäminen ei toimi.
   * Sain Koodikatselmoinnista saamastani palautteesta todennäköisen ratkaisun ongelmaan. En ole vain vielä kerennyt tehdä sitä.
   * Edit-painike ja -sivu ovat silti mukana sovelluksessa. Tällä hetkellä kohteen tietojen päivittäminen poistaa muokattavan rivin.
   * Unitien lisääminen ja poistaminen kuitenkin toimivat.
