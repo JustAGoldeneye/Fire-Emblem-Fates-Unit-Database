@@ -28,9 +28,9 @@ salasana
 
 [User storyt](https://github.com/JustAGoldeneye/Fire-Emblem-Fates-Unit-Database/blob/master/documentation/User%20storyt.md)
 
-[Käyttöohje]()
+[Käyttöohje](https://github.com/JustAGoldeneye/Fire-Emblem-Fates-Unit-Database/blob/master/documentation/K%C3%A4ytt%C3%B6ohje.md)
 
-[Asennusohje]()
+[Asennusohje](https://github.com/JustAGoldeneye/Fire-Emblem-Fates-Unit-Database/blob/master/documentation/Asennusohje.md)
 
 **Tietokantasovelluksen tarkoituksena on pitää kirjaa Fire Emblem Fates -pelin hahmoista.**
 
