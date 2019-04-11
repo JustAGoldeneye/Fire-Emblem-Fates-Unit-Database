@@ -5,13 +5,14 @@
     <h1>Units</h1>
   {% if current_user.is_authenticated %}
     {% if current_user.is_admin %}
-      <b>This table is PUBLIC. The edits made here will show up to everyone.</b>
+      <b>This table is PUBLIC. The edits made here will show up to everyone.&nbsp;</b>
       <a href="{{ url_for('units_form') }} ">Add a unit</a>
     {% else %}
       <b>This table is PUBLIC.</b>
       <p>You need adiministrator rights to edit a PUBLIC table.</p>
     {% endif %}
   {% else %}
+    <b>This table is PUBLIC.</b>
     <p>Log in as an adiministrator to edit edit a PUBLIC table.</p>
   {% endif %}
     {% if number_of_units is defined %}
