@@ -3,15 +3,15 @@
 ## Kirjautuminen
 * Ohjelmaan pitää voida kirjautua.
 * Rekisteröitymätön käyttäjä voi luoda uudet tunnukset (käyttäjänimi ja salasana).
-  * Salasanan tallentaminen turvallisesti ei ole oleellista tämän projektin kannalta(?)
-* Ohjelmaan voitaisiin lisätä esimerkkitietokanta, jota voisi katsella ilman käyttäjätunnuksia, mutta tämä ei vielä alussa ole oleellisinta.
+
+## Kirjautumaton käyttäjä
+* Kirjautumaton käyttäjä voi katsoa tekemiänsä joukkoja ja hahmoja helposti listoina ja yhteenvetokyselyinä.
+* Kirjautumaton käyttäjä voi katsoa hahmoja ja varusteita listoina.
+* Kirjautumaton käyttäjä voi etsiä hahmoja ja kykyjä nimen perusteella.
 
 ## Tavallinen käyttäjä
 * Tavallinen käyttäjä voi luoda hahmoista taistelujoukkoja.
 * Tavallinen käyttäjä voi valita hahmoilleen varustetita, kuten kykyjä ja aseita.
-* Tavallinen käyttäjä voi katsoa tekemiänsä joukkoja ja hahmoja helposti listoina ja yhteenvetokyselyinä.
-* Tavallinen käyttäjä voi katsoa hahmoja ja varusteita listoina.
-* Tavallinen käyttäjä voi etsiä hahmoja ja kykyjä nimen perusteella.
 
 ## Järjestelmänvalvojat
 * Järjestelmänvalvojat näkevät kaikkien käyttijien tiedot, mukaanlukein taistelujoukot.

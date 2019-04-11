@@ -12,8 +12,8 @@ Ominaisuudet, joita en vielä saanut toimimaan:
   * Unitien lisääminen ja poistaminen kuitenkin toimivat.
 * Käyttjätunnusten luominen ohjelman kautta
 
-## Käyttäjätunnus ja salasana:
-Voit kirjautua sisään näillä tunnuksilla:
+## Kirjautuminen:
+Voit **luoda uudet tunnukset** tai kirjautua sisään näillä:
 
 tetstiAdmin
 
