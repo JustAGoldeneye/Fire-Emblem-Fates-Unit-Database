@@ -1,6 +1,7 @@
-from application import app, db
 from flask import redirect, render_template, request, url_for
-from flask_login import login_required
+from flask_login import current_user
+
+from application import app, db, login_required
 from application.units.models import Unit
 from application.units.forms import UnitForm
 
@@ -9,17 +10,17 @@ def units_index():
     return render_template("units/list.html", units = Unit.query.all(), number_of_units=Unit.number_of_units(), best_unit_in_level=Unit.best_unit_in_level(), best_unit_in_hp= Unit.best_unit_in_hp(), best_unit_in_strength=Unit.best_unit_in_strength(), best_unit_in_magic=Unit.best_unit_in_magic(), best_unit_in_skill=Unit.best_unit_in_skill(), best_unit_in_speed=Unit.best_unit_in_speed(), best_unit_in_luck=Unit.best_unit_in_luck(), best_unit_in_defense=Unit.best_unit_in_defense(), best_unit_in_resistance=Unit.best_unit_in_resistance(), best_unit_in_movement=Unit.best_unit_in_movement(), best_unit_in_hpGrowth= Unit.best_unit_in_hpGrowth(), best_unit_in_strengthGrowth=Unit.best_unit_in_strengthGrowth(), best_unit_in_magicGrowth=Unit.best_unit_in_magicGrowth(), best_unit_in_skillGrowth=Unit.best_unit_in_skillGrowth(), best_unit_in_speedGrowth=Unit.best_unit_in_speedGrowth(), best_unit_in_luckGrowth=Unit.best_unit_in_luckGrowth(), best_unit_in_defenseGrowth=Unit.best_unit_in_defenseGrowth(), best_unit_in_resistanceGrowth=Unit.best_unit_in_resistanceGrowth())
 
 @app.route("/units/new/")
-@login_required
+@login_required(role="ADMIN")
 def units_form():
     return render_template("units/new.html", form = UnitForm())
 
 @app.route("/units/edit/", methods=["GET"])
-@login_required
+@login_required(role="ADMIN")
 def units_editForm():
     return render_template("units/edit.html", units = Unit.query.filter_by(id=2), form = UnitForm()) #muokkaa
 
 @app.route("/units/<unit_id>/", methods=["POST"])
-@login_required
+@login_required(role="ADMIN")
 def units_delete(unit_id):
     u = Unit.query.get(unit_id)
 
@@ -29,7 +30,7 @@ def units_delete(unit_id):
     return redirect(url_for("units_index"))
 
 @app.route("/units/", methods=["POST"])
-@login_required
+@login_required(role="ADMIN")
 def units_create():
     form = UnitForm(request.form)
 
@@ -44,7 +45,7 @@ def units_create():
     return redirect(url_for("units_index"))
 
 @app.route("/units/<unit_id>/", methods=["POST"])
-@login_required
+@login_required(role="ADMIN")
 def units_edit(unit_id):
     form = UnitForm(request.form)
 

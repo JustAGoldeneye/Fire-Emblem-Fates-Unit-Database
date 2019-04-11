@@ -39,7 +39,7 @@ def users_create():
     if not form.validate():
         return render_template("auth/registerationform.html", form = form)
 
-    u = User(form.username.data, form.password.data, form.administrator)
+    u = User(form.username.data, form.password.data)
     db.session().add(u)
     db.session().commit()
 
