@@ -30,7 +30,7 @@ def auth_logout():
 
 @app.route("/auth/registerationform/")
 def users_form():
-    return render_template("auth/registerationform.html")
+    return render_template("auth/registerationform.html", form = createUser())
 
 @app.route("/auth/", methods=["POST"])
 def users_create():
@@ -39,8 +39,8 @@ def users_create():
     if not form.validate():
         return render_template("auth/registerationform.html", form = form)
 
-    u = User(form.username.data, form.password.data, form.administrator.data)
+    u = User(form.username.data, form.password.data, form.administrator)
     db.session().add(u)
     db.session().commit()
 
-    return redirect(url_for("units_index"))
+    return redirect(url_for("index"))
