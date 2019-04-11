@@ -3,7 +3,17 @@
 {% block body %}
   <table>
     <h1>Units</h1>
+  {% if current_user.is_authenticated %}
+    {% if current_user.is_admin %}
+      <a href="{{ url_for('units_form') }} ">Add a unit</a>
+    {% else %}
+      <b>You need adiministrator rights to edit this table.</b>
+    {% endif %}
+  {% else %}
+    <b>Log in as an adiministrator to edit edit this table.</b>
+  {% endif %}
     {% if number_of_units is defined %}
+    <p></p>
     <p>{{number_of_units}} units in the database</p>
     {% endif %}
     <tr>
@@ -50,6 +60,8 @@
       <td>{{ unit.luckGrowth }}</td>
       <td>{{ unit.defenseGrowth }}</td>
       <td>{{ unit.resistanceGrowth }}</td>
+      {% if current_user.is_authenticated %}
+      {% if current_user.is_admin %}
       <td>
         <form method="GET" action="{{ url_for('units_editForm', unit_id=unit.id) }}">
             <input type="submit" value="Edit"/>
@@ -61,6 +73,8 @@
         </form>
       </td>
     </tr>
+    {% endif %}
+    {% endif %}
     {% endfor %}
     </table>
     <h2>Best units by stats</h2>
