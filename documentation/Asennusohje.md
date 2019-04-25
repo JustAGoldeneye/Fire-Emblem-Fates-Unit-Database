@@ -6,7 +6,16 @@ Pelkkä sovelluksen sisällön tarkastelu ei vaadi käyttäjätunnusta, mutta mu
 
 ## Sovelluksen asentaminen paikallisesti omalle tietokoneelle
 
-1. 
+Vaatimukset:
+* fef-db-sovellus
+* Bash-komentotulkki
+* Python3-asennuss
+
+1. Avaa fef-db:n hakemisto komentorivillä.
+2. Asenna riippuvuudet komennolla `pip install -r requirements.txt`.
+3. Avaa Venv `source venv/bin/activate`.
+4. Käytnnistä fef-db `pyhton3 run.py`.
+5. Mene verkkosivulle http://127.0.0.1:5000/.
 
 ## Sovelluksen asentaminen Herokuun
 
