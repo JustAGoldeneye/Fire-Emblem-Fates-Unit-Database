@@ -9,7 +9,7 @@ Pelkkä sovelluksen sisällön tarkastelu ei vaadi käyttäjätunnusta, mutta mu
 Vaatimukset:
 * fef-db-sovellus
 * Bash-komentotulkki
-* Python3-asennuss
+* Python3-asennus
 
 1. Avaa fef-db:n hakemisto komentorivillä.
 2. Asenna riippuvuudet komennolla `pip install -r requirements.txt`.
