@@ -14,10 +14,10 @@ def units_index():
 def units_form():
     return render_template("units/new.html", form = UnitForm())
 
-@app.route("/units/edit/", methods=["GET"])
+@app.route("/units/edit/<unit_id>/", methods=["GET"])
 @login_required(role="ADMIN")
-def units_editForm():
-    return render_template("units/edit.html", units = Unit.query.filter_by(id=2), form = UnitForm()) #muokkaa
+def units_editForm(unit_id):
+    return render_template("units/edit.html", units = Unit.query.filter_by(id=unit_id), form = UnitForm())
 
 @app.route("/units/<unit_id>/", methods=["POST"])
 @login_required(role="ADMIN")
@@ -44,36 +44,39 @@ def units_create():
 
     return redirect(url_for("units_index"))
 
-@app.route("/units/<unit_id>/", methods=["POST"])
+@app.route("/units/<unit_id>/", methods=['GET','POST'])
 @login_required(role="ADMIN")
 def units_edit(unit_id):
-    form = UnitForm(request.form)
 
-    if not form.validate():
-        return render_template("units/edit.html", form = form)
+    #u = Unit.query.get(unit_id)
+    
+    #form = UnitForm(request.form)
 
-    u = Unit.query.get(unit_id)
+    #if not form.validate():
+        #return render_template("units/edit.html", form = form)
 
-    u.name = request.form.get('name')
-    u.classGP = request.form.get('classGP')
-    u.level = request.form.get('level')
-    u.hp = request.form.get('hp')
-    u.strength = request.form.get('strength')
-    u.magic = request.form.get('magic')
-    u.skill = request.form.get('skill')
-    u.speed = request.form.get('speed')
-    u.luck = request.form.get('luck')
-    u.defense = request.form.get('defense')
-    u.resistance = request.form.get('resistance')
-    u.movement = request.form.get('movement')
-    u.hpGrowth = request.form.get('hpGrowth')
-    u.strengthGrowth = request.form.get('strengthGrowth')
-    u.magicGrowth = request.form.get('magicGrowth')
-    u.skillGrowth = request.form.get('skillGrowth')
-    u.speedGrowth = request.form.get('speedGrowth')
-    u.luckGrowth = request.form.get('luckGrowth')
-    u.defenseGrowth = request.form.get('defenseGrowth')
-    u.resistanceGrowth = request.form.get('resistanceGrowth')
+    #u.name = request.form.get('name')
+    #u.classGP = request.form.get('classGP')
+    #u.level = request.form.get('level')
+    #u.hp = request.form.get('hp')
+    #u.strength = request.form.get('strength')
+    #u.magic = request.form.get('magic')
+    #u.skill = request.form.get('skill')
+    #u.speed = request.form.get('speed')
+    #u.luck = request.form.get('luck')
+    #u.defense = request.form.get('defense')
+    #u.resistance = request.form.get('resistance')
+    #u.movement = request.form.get('movement')
+    #u.hpGrowth = request.form.get('hpGrowth')
+    #u.strengthGrowth = request.form.get('strengthGrowth')
+    #u.magicGrowth = request.form.get('magicGrowth')
+    #u.skillGrowth = request.form.get('skillGrowth')
+    #u.speedGrowth = request.form.get('speedGrowth')
+    #u.luckGrowth = request.form.get('luckGrowth')
+    #u.defenseGrowth = request.form.get('defenseGrowth')
+    #u.resistanceGrowth = request.form.get('resistanceGrowth')
+
+    #This method always deletes the row in the database, even with just commit and final return. (units_delete doesn't)
 
     db.session().commit()
     
