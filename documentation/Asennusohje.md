@@ -14,8 +14,10 @@ Vaatimukset:
 1. Avaa fef-db:n hakemisto komentorivillä.
 2. Asenna riippuvuudet komennolla `pip install -r requirements.txt`.
 3. Avaa Venv `source venv/bin/activate`.
-4. Käytnnistä fef-db `pyhton3 run.py`.
-5. Mene verkkosivulle http://127.0.0.1:5000/.
+
+Käynnistäminen:
+1. Käytnnistä fef-db komennolla `pyhton3 run.py`.
+2. Mene tietokoneesi verkkoselaimella osoitteeseen http://127.0.0.1:5000/.
 
 ## Sovelluksen asentaminen Herokuun
 
