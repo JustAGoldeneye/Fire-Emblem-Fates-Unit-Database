@@ -2,12 +2,13 @@
 
 ## Huomiota projektin nykyisestä tilasta
 
-Unit-taulun on tarkoitus olla sama kaikille käyttäjille.
+Unit-taulun on tarkoitus olla sama kaikille käyttäjille. (Team-taulujen on tarkoitus olla jokaiselle käyttäjälle yksityinen.)
 
 Ominaisuudet, joita en vielä saanut toimimaan:
-* Käytin tällä kertaa ajan paljolti ongelmien korjaamiseen, joten en niin kerennyt keskittyä uusiin ominaisuuksiin.
+* Team-tauluun liittyvien toiminallisuuksien totetuttaminen on kesken, eikä niihin pääse vielä käyttöliittymän kautta käsiksi.
 * Unit-taulun kohteiden päivttäminen ei toimi.
-  * Sain Koodikatselmoinnista saamastani palautteesta todennäköisen ratkaisun ongelmaan. En ole vain vielä kerennyt tehdä sitä.
+  * Käytin suurimman osan ajasta viikolla 6 tämän korjaamisen yrittämiseen, mutta en onnistunut saamaan mitään konkreettista aikaan.
+  * Minulla ei ole tällä hetkellä toimivaa ajatusta tämän korjaamiseen.
   * Edit-painike ja -sivu ovat silti mukana sovelluksessa. Tällä hetkellä kohteen tietojen päivittäminen poistaa muokattavan rivin.
   * Unitien lisääminen ja poistaminen kuitenkin toimivat.
 
