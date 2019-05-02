@@ -56,6 +56,9 @@ from application import views
   
 from application.units import models
 from application.units import views
+
+from application.teams import models
+from application.teams import views
   
 from application.auth import models 
 from application.auth import views

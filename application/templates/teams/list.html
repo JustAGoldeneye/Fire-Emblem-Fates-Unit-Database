@@ -1,1 +1,33 @@
- 
+{% extends "layout.html" %}
+
+{% block body %}
+<table>
+    <h1>Units</h1>
+  {% if current_user.is_authenticated %}
+    <b>This table is PRIVATE.</b>
+  {% else %}
+    <b>This table is PRIVATE.</b>
+    <p>Log in to get an access to your own PRIVATE table.</p>
+  {% endif %}
+    <form method="POST" action="{{ url_for('teams_create') }}">
+        <tr>
+            <th>Create a new team</th>
+            <td>{{ form.name }}</td>
+            <td>
+                <input type="submit" value="Done"/>
+            </td>
+            <td>
+                <ul>
+                    {% for error in form.name.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+        </tr>
+    </form>
+    {% for team in teams %}
+    <tr>
+        <td>TODO</td>
+    </tr>
+    {% endfor %}
+{% endblock %}
