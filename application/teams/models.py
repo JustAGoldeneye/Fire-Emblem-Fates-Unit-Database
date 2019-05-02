@@ -18,7 +18,19 @@ class Team(Base):
     name = db.Column(db.String(144), nullable=False)
 
     units = db.relationship("TeamUnit", backref='unit', lazy=True, cascade="all, delete-orphan")
-    user_id = db.Column(db.Integer, db.ForeignKey('account.id'), nullable=False)
+    account_id = db.Column(db.Integer, db.ForeignKey('account.id'), nullable=False)
 
     def __init__(self, name):
         self.name = name
+
+    @staticmethod
+    def find_users_teams(account_id):
+        stmt = text("SELECT * FROM team "
+                    "WHERE account_id = :accountid")
+
+        res = db.engine.execute(stmt, accountid = account_id)
+        result = []
+        for row in res:
+            result.append(row)
+
+        return result

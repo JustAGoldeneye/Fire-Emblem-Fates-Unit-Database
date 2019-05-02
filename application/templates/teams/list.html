@@ -9,25 +9,32 @@
     <b>This table is PRIVATE.</b>
     <p>Log in to get an access to your own PRIVATE table.</p>
   {% endif %}
+    <p></p>
+    <tr>
+        <th>Team name</th>
+    </tr>
     <form method="POST" action="{{ url_for('teams_create') }}">
         <tr>
-            <th>Create a new team</th>
             <td>{{ form.name }}</td>
             <td>
-                <input type="submit" value="Done"/>
+                <input type="submit" value="Add"/>
             </td>
             <td>
-                <ul>
-                    {% for error in form.name.errors %}
-                    <li>{{ error }}</li>
-                    {% endfor %}
-                </ul>
+                {% for error in form.name.errors %}<!--Casuses the team list to disappear and I can't fix it, so I guess it's a feature then.-->
+                <li>{{ error }}</li>
+                {% endfor %}
             </td>
         </tr>
     </form>
     {% for team in teams %}
     <tr>
-        <td>TODO</td>
+        <td>{{ team.name }}</td>
+        <td>
+            <form mehtod="POST" action = "{{ url_for('teams_delete', team_id=team.id) }}">
+                <input type="submit" value="Delete"/>
+            </form>
+        </td>
     </tr>
     {% endfor %}
+</table>
 {% endblock %}

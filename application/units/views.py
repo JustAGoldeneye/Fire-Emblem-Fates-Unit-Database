@@ -19,7 +19,7 @@ def units_form():
 def units_editForm(unit_id):
     return render_template("units/edit.html", units = Unit.query.filter_by(id=unit_id), form = UnitForm())
 
-@app.route("/units/<unit_id>/", methods=["POST"])
+@app.route("/units/<unit_id>/", methods=['GET','POST'])
 @login_required(role="ADMIN")
 def units_delete(unit_id):
     u = Unit.query.get(unit_id)
