@@ -33,6 +33,34 @@ Kaikista hahmoista tallennetaan niiden alkuperäiset statit (stat = hahmon numee
 ## Toimintoja
 Siirretty [user storyeihin](https://github.com/JustAGoldeneye/Fire-Emblem-Fates-Unit-Database/blob/master/documentation/User%20storyt.md)
 
+## Yhteenvetokyselyt
+
+**Hakee annetun teamin unitit**
+SELECT * FROM team
+JOIN team_unit ON team.id = team_unit.team_id
+JOIN unit ON team_unit.team_id = unit.id "
+WHERE team.id = :teamid
+
+**Laskee annetun teamin unitien määrän**
+SELECT COUNT(team.id) FROM team
+JOIN team_unit ON team.id = team_unit.team_id 
+JOIN unit ON team_unit.team_id = unit.id 
+WHERE team.id = :teamid
+
+**Hakee kaikissa käyttäjän teameissa olevat uniti**
+SELECT * FROM team
+JOIN team_unit ON team.id = team_unit.team_id
+JOIN unit ON team_unit.unit_id = unit.id
+WHERE team.account_id = :userid
+ORDER BY team.id
+
+**Laskee kaikkien käyttäjän eri teamien unitien määrät**
+SELECT COUNT(*) FROM team
+JOIN team_unit ON team.id = team_unit.team_id
+JOIN unit ON team_unit.unit_id = unit.id
+WHERE team.account_id = :userid
+GROUP BY team.id
+
 ## Ongelmat
 * Heroku ei toimi
   * Lokin perusteella ainakin osa ongelmasta näyttäisi aiheutuvan siitä, että joidenkin tietokantasarakkeiden nimissä on isoja kirjaimia, mikä aiheuttaa yhteensopivuusongelmia Postgresin kanssa.

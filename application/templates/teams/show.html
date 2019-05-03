@@ -6,14 +6,6 @@
     {% if number_of_units is defined %}
     <p>{{number_of_units}} units in the table</p>
     {% endif %}
-    <!--<form method="POST" action="{{ url_for('teams_add_unit', team_id = team.id) }}">
-      <tr>
-        <td>{{ form.name }}</td>
-        <td>
-          <input type ="submit" value="Add a unit"/>
-        </td>
-      </tr>
-    </form>-->
     <tr>
         <th>Name</th>
         <th>Class</th>
@@ -58,96 +50,7 @@
       <td>{{ unit.luckGrowth }}</td>
       <td>{{ unit.defenseGrowth }}</td>
       <td>{{ unit.resistanceGrowth }}</td>
-      <!--{% if current_user.is_authenticated %}
-      {% if current_user.is_admin %}
-      <td>
-        <form method="GET" action="{{ url_for('units_editForm', unit_id=unit.id) }}">
-            <input type="submit" value="Edit"/>
-          </form>
-      </td>
-      <td>
-        <form method="POST" action="{{ url_for('units_delete', unit_id=unit.id) }}">
-          <input type="submit" value="Delete"/>
-        </form>
-      </td>
-    </tr>
-    {% endif %}
-    {% endif %}-->
     {% endfor %}
     </table>
-    <!--<h2>Best units by stats</h2>
-    <table>
-    <tr>
-      <th>Level</th>
-      <td>{{best_unit_in_level}}</td>
-    </tr>
-    <tr>
-      <th>HP</th>
-      <td>{{best_unit_in_hp}}</td>
-    </tr>
-    <tr>
-      <th>Strength</th>
-      <td>{{best_unit_in_strength}}</td>
-    </tr>
-    <tr>
-      <th>Magic</th>
-      <td>{{best_unit_in_magic}}</td>
-    </tr>
-    <tr>
-      <th>Skill</th>
-      <td>{{best_unit_in_skill}}</td>
-    </tr>
-    <tr>
-      <th>Speed</th>
-      <td>{{best_unit_in_speed}}</td>
-    </tr>
-    <tr>
-      <th>Luck</th>
-      <td>{{best_unit_in_luck}}</td>
-    </tr>
-    <tr>
-      <th>Defense</th>
-      <td>{{best_unit_in_defense}}</td>
-    </tr>
-    <tr>
-      <th>Resistance</th>
-      <td>{{best_unit_in_resistance}}</td>
-    </tr>
-    <tr>
-      <th>Movement</th>
-      <td>{{best_unit_in_movement}}</td>
-    </tr>
-    <tr>
-      <th>HP Growth Rate %</th>
-      <td>{{best_unit_in_hpGrowth}}</td>
-    </tr>
-    <tr>
-      <th>Strength Growth Rate %</th>
-      <td>{{best_unit_in_strengthGrowth}}</td>
-    </tr>
-    <tr>
-      <th>Magic Growth Rate %</th>
-      <td>{{best_unit_in_magicGrowth}}</td>
-    </tr>
-    <tr>
-      <th>Skill Growth Rate %</th>
-      <td>{{best_unit_in_skillGrowth}}</td>
-    </tr>
-    <tr>
-      <th>Speed Growth Rate %</th>
-      <td>{{best_unit_in_speedGrowth}}</td>
-    </tr>
-    <tr>
-      <th>Luck Growth Rate %</th>
-      <td>{{best_unit_in_luckGrowth}}</td>
-    </tr>
-    <tr>
-      <th>Defense Growth Rate %</th>
-      <td>{{best_unit_in_defenseGrowth}}</td>
-    </tr>
-    <tr>
-      <th>Resistance Growth Rate %</th>
-      <td>{{best_unit_in_resistanceGrowth}}</td>
-    </tr>-->
   </table>
 {% endblock %} 

@@ -83,16 +83,6 @@ class Unit(Base):
 
         return result       
 
-    #@staticmethod
-    #def best_unit_in(stat):
-        #stmt = text("SELECT name FROM Unit WHERE :stat = (SELECT MAX(:stat) FROM Unit)").params(stat=stat)
-        #res = db.engine.execute(stmt)
-
-        #for row in res:
-            #return row[0]
-
-    # I had to divide my original plan into seperate methods because calling above method several times in one render_template() caused "Too many positional arguments for staticmethod call" error.
-
     @staticmethod
     def best_unit_in_level():
         stmt = text("SELECT Unit.name FROM Unit WHERE Unit.level = (SELECT MAX(Unit.level) FROM Unit)")
