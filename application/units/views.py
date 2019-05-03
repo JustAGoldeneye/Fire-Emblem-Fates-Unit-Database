@@ -7,7 +7,7 @@ from application.units.forms import UnitForm
 
 @app.route("/units", methods=["GET"])
 def units_index():
-    return render_template("units/list.html", units = Unit.query.all(), number_of_units=Unit.number_of_units(), best_unit_in_level=Unit.best_unit_in_level(), best_unit_in_hp= Unit.best_unit_in_hp(), best_unit_in_strength=Unit.best_unit_in_strength(), best_unit_in_magic=Unit.best_unit_in_magic(), best_unit_in_skill=Unit.best_unit_in_skill(), best_unit_in_speed=Unit.best_unit_in_speed(), best_unit_in_luck=Unit.best_unit_in_luck(), best_unit_in_defense=Unit.best_unit_in_defense(), best_unit_in_resistance=Unit.best_unit_in_resistance(), best_unit_in_movement=Unit.best_unit_in_movement(), best_unit_in_hpGrowth= Unit.best_unit_in_hpGrowth(), best_unit_in_strengthGrowth=Unit.best_unit_in_strengthGrowth(), best_unit_in_magicGrowth=Unit.best_unit_in_magicGrowth(), best_unit_in_skillGrowth=Unit.best_unit_in_skillGrowth(), best_unit_in_speedGrowth=Unit.best_unit_in_speedGrowth(), best_unit_in_luckGrowth=Unit.best_unit_in_luckGrowth(), best_unit_in_defenseGrowth=Unit.best_unit_in_defenseGrowth(), best_unit_in_resistanceGrowth=Unit.best_unit_in_resistanceGrowth())
+    return render_template("units/list.html", units = Unit.get_unit_by_class(), number_of_units=Unit.number_of_units(), best_unit_in_level=Unit.best_unit_in_level(), best_unit_in_hp= Unit.best_unit_in_hp(), best_unit_in_strength=Unit.best_unit_in_strength(), best_unit_in_magic=Unit.best_unit_in_magic(), best_unit_in_skill=Unit.best_unit_in_skill(), best_unit_in_speed=Unit.best_unit_in_speed(), best_unit_in_luck=Unit.best_unit_in_luck(), best_unit_in_defense=Unit.best_unit_in_defense(), best_unit_in_resistance=Unit.best_unit_in_resistance(), best_unit_in_movement=Unit.best_unit_in_movement(), best_unit_in_hpGrowth= Unit.best_unit_in_hpGrowth(), best_unit_in_strengthGrowth=Unit.best_unit_in_strengthGrowth(), best_unit_in_magicGrowth=Unit.best_unit_in_magicGrowth(), best_unit_in_skillGrowth=Unit.best_unit_in_skillGrowth(), best_unit_in_speedGrowth=Unit.best_unit_in_speedGrowth(), best_unit_in_luckGrowth=Unit.best_unit_in_luckGrowth(), best_unit_in_defenseGrowth=Unit.best_unit_in_defenseGrowth(), best_unit_in_resistanceGrowth=Unit.best_unit_in_resistanceGrowth())
 
 @app.route("/units/new/")
 @login_required(role="ADMIN")
@@ -17,10 +17,6 @@ def units_form():
 @app.route("/units/edit/<unit_id>/", methods=["GET"])
 @login_required(role="ADMIN")
 def units_editForm(unit_id):
-
-    print("id?form: ")
-    print(unit_id)
-
     return render_template("units/edit.html", units = Unit.query.filter_by(id=unit_id), form = UnitForm(), unit_id=unit_id)
 
 @app.route("/units/<unit_id>/", methods=['GET','POST'])
@@ -52,45 +48,42 @@ def units_create():
 @login_required(role="ADMIN")
 def units_edit(unit_id):
 
-    print("id?edit: ")
-    print(unit_id)
+    u = Unit.query.get(unit_id)
+    
+    form = UnitForm(obj=u)
+
+    if form.validate_on_submit():
+        form.populate_obj(u)
+        db.session.commit()
 
     #u = Unit.query.get(unit_id)
     
-    #form = UnitForm(obj=u)
+    #form = UnitForm(request.form)
 
-    #if form.validate_on_submit():
-        #form.populate_obj(u)
-        #db.session.commit()
+    #if not form.validate():
+        #return render_template("units/edit.html", form = form)
 
-    u = Unit.query.get(unit_id)
-    
-    form = UnitForm(request.form)
+    #u.name = request.form.get('name')
+    #u.classGP = request.form.get('classGP')
+    #u.level = request.form.get('level')
+    #u.hp = request.form.get('hp')
+    #u.strength = request.form.get('strength')
+    #u.magic = request.form.get('magic')
+    #u.skill = request.form.get('skill')
+    #u.speed = request.form.get('speed')
+    #u.luck = request.form.get('luck')
+    #u.defense = request.form.get('defense')
+    #u.resistance = request.form.get('resistance')
+    #u.movement = request.form.get('movement')
+    #u.hpGrowth = request.form.get('hpGrowth')
+    #u.strengthGrowth = request.form.get('strengthGrowth')
+    #u.magicGrowth = request.form.get('magicGrowth')
+    #u.skillGrowth = request.form.get('skillGrowth')
+    #u.speedGrowth = request.form.get('speedGrowth')
+    #u.luckGrowth = request.form.get('luckGrowth')
+    #u.defenseGrowth = request.form.get('defenseGrowth')
+    #u.resistanceGrowth = request.form.get('resistanceGrowth')
 
-    if not form.validate():
-        return render_template("units/edit.html", form = form)
-
-    u.name = request.form.get('name')
-    u.classGP = request.form.get('classGP')
-    u.level = request.form.get('level')
-    u.hp = request.form.get('hp')
-    u.strength = request.form.get('strength')
-    u.magic = request.form.get('magic')
-    u.skill = request.form.get('skill')
-    u.speed = request.form.get('speed')
-    u.luck = request.form.get('luck')
-    u.defense = request.form.get('defense')
-    u.resistance = request.form.get('resistance')
-    u.movement = request.form.get('movement')
-    u.hpGrowth = request.form.get('hpGrowth')
-    u.strengthGrowth = request.form.get('strengthGrowth')
-    u.magicGrowth = request.form.get('magicGrowth')
-    u.skillGrowth = request.form.get('skillGrowth')
-    u.speedGrowth = request.form.get('speedGrowth')
-    u.luckGrowth = request.form.get('luckGrowth')
-    u.defenseGrowth = request.form.get('defenseGrowth')
-    u.resistanceGrowth = request.form.get('resistanceGrowth')
-
-    db.session().commit()
+    #db.session().commit()
     
     return redirect(url_for("units_index"))

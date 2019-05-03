@@ -6,3 +6,6 @@ class TeamForm(FlaskForm):
 
     class Meta:
         csrf = False
+
+class AddUnitForm(FlaskForm):
+    name = StringField("Name")

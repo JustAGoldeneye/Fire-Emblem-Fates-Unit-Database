@@ -46,6 +46,22 @@ class Team(Base):
             return row
 
     @staticmethod
+    def get_units_in_team(team_id):
+        stmt = text("SELECT * FROM team "
+                    "JOIN team_unit ON team.id = team_unit.team_id "
+                    "JOIN unit ON team_unit.team_id = unit.id "
+                    "WHERE team.id = :teamid "
+                    "GROUP BY unit.\"classGP\"")
+
+        res = db.engine.execute(stmt, teamid = team_id)
+
+        result = []
+        for row in res:
+            result.append(row)
+
+        return result
+
+    @staticmethod
     def number_of_units_in_team(team_id):
         stmt = text("SELECT COUNT(team.id) FROM team "
                     "JOIN team_unit ON team.id = team_unit.team_id "
@@ -56,3 +72,19 @@ class Team(Base):
 
         for row in res:
             return row[0]
+
+    @staticmethod
+    def units_in_teams(user_id):
+        stmt = text("SELECT * FROM team " 
+                    "JOIN team_unit ON team.id = team_unit.team_id "
+                    "JOIN unit ON team_unit.unit_id = unit.id "
+                    "WHERE team.account_id = :userid "
+                    "GROUP BY team.id")
+
+        res = db.engine.execute(stmt, userid = user_id)
+
+        result = []
+        for row in res:
+            result.append(row)
+
+        return result

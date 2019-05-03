@@ -58,7 +58,30 @@ class Unit(Base):
 
         for row in res:
             return row[0]
-            
+
+    @staticmethod
+    def get_unit_ids_with_name(unit_name):
+        stmt = text("SELECT id FROM unit WHERE name = :unitname")
+
+        res = db.engine.execute(stmt, unitname = unit_name)
+
+        result = []
+        for row in res:
+            result.append(row)
+
+        return result
+
+    @staticmethod
+    def get_unit_by_class():
+        stmt = text("SELECT * FROM unit GROUP BY \"classGP\"")
+
+        res = db.engine.execute(stmt)
+
+        result = []
+        for row in res:
+            result.append(row)
+
+        return result       
 
     #@staticmethod
     #def best_unit_in(stat):

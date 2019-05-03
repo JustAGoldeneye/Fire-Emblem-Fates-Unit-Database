@@ -11,16 +11,18 @@
   {% endif %}
     <p></p>
     <tr>
+        <th>Team number</th>
         <th>Team name</th>
     </tr>
     <form method="POST" action="{{ url_for('teams_create') }}">
         <tr>
+            <td></td>
             <td>{{ form.name }}</td>
             <td>
                 <input type="submit" value="Add"/>
             </td>
             <td>
-                {% for error in form.name.errors %}<!--Casuses the team list to disappear and I can't fix it, so I guess it's a feature then.-->
+                {% for error in form.name.errors %}
                 <li>{{ error }}</li>
                 {% endfor %}
             </td>
@@ -28,6 +30,7 @@
     </form>
     {% for team in teams %}
     <tr>
+        <td></td>
         <td>
             <a href="{{ url_for('teams_show', team_id=team.id) }}">{{ team.name }}</a>
         </td>
@@ -36,6 +39,21 @@
                 <input type="submit" value="Delete"/>
             </form>
         </td>
+    </tr>
+    {% endfor %}
+    <tr>
+        <th>Units in teams</th>
+    </tr>
+    <tr>
+        <th>Team number</th>
+        <th>Unit's name</th>
+        <th>Unit's class</th>
+    </tr>
+    {% for unit in units %}
+    <tr>
+        <td>{{ unit.team_id }}</td>
+        <td>{{ unit.name }}</td>
+        <td>{{ unit.classGP }}</td>
     </tr>
     {% endfor %}
 </table>
