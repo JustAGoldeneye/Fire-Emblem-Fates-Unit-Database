@@ -34,4 +34,24 @@ Klikkaamalla tästä pääset sivulle, josta voit lisätä uudeen unitin syött�
 
 ### Edit
 
-(Tämä ominaisuuden toteutus on vielä kesken.)
+*Edit*-painike avaa sivun, jonka kautta hahmoa voi muokata. Hahmon muokkaaminen toimii samalla tavalla kuin lisääminen
+
+## Teams
+
+Tältä sivulta näet omien teamisi ja yhteenvedon niiden tiedoista. **Sivun tarkastelemiseen tarvitaan käyttäjötunnus.**
+
+### Teamin lisääminen
+
+Syötä uuden teamin nimi tyhjään kenttään ja klikkaa Add lisätäksesi uuden teamin.
+
+### Teamin poistaminen
+
+*Delete*-painike poistaa teamin, jonka yhteydessä painike on.
+
+### Teamin tarkastelu
+
+Klikkaa teamin nimeä päästäksesi teamin tarkastelusivulle.
+
+#### Unitin lisäämineen teamiin
+
+Tämä ei valitettavasti ole vielä mahdollista ominaisuuden toetuksessa ilmenneiden ongelmien vuoksi.

@@ -14,20 +14,6 @@
         <th>Team number</th>
         <th>Team name</th>
     </tr>
-    <form method="POST" action="{{ url_for('teams_create') }}">
-        <tr>
-            <td></td>
-            <td>{{ form.name }}</td>
-            <td>
-                <input type="submit" value="Add"/>
-            </td>
-            <td>
-                {% for error in form.name.errors %}
-                <li>{{ error }}</li>
-                {% endfor %}
-            </td>
-        </tr>
-    </form>
     {% for team in teams %}
     <tr>
         <td>{{ team.id }}</td>
@@ -41,6 +27,20 @@
         </td>
     </tr>
     {% endfor %}
+    <form method="POST" action="{{ url_for('teams_create') }}">
+            <tr>
+                <td>#</td>
+                <td>{{ form.name }}</td>
+                <td>
+                    <input type="submit" value="Add"/>
+                </td>
+                <td>
+                    {% for error in form.name.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </td>
+            </tr>
+        </form>
     <tr>
         <td>List sizes:</td>
         <td>{% for unit_number in unit_numbers %}{{ unit_number }}, {% endfor %}</th>        
