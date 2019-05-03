@@ -6,19 +6,18 @@
 
 ## Kirjautumaton käyttäjä
 * Kirjautumaton käyttäjä voi katsoa tekemiänsä joukkoja ja hahmoja helposti listoina ja yhteenvetokyselyinä.
-* Kirjautumaton käyttäjä voi katsoa hahmoja ja varusteita listoina.
-* Kirjautumaton käyttäjä voi etsiä hahmoja ja kykyjä nimen perusteella.
+* Kirjautumaton käyttäjä voi katsoa hahmoja ja varusteita listoina. **TOTEUTTAMATTA**
 
 ## Tavallinen käyttäjä
 * Tavallinen käyttäjä voi luoda hahmoista taistelujoukkoja.
-* Tavallinen käyttäjä voi valita hahmoilleen varustetita, kuten kykyjä ja aseita.
+* Tavallinen käyttäjä voi valita hahmoilleen varustetita, kuten kykyjä ja aseita. **TOTEUTTAMATTA**
 
-## Järjestelmänvalvojat
-* Järjestelmänvalvojat näkevät kaikkien käyttijien tiedot, mukaanlukein taistelujoukot.
-* Järjestelmänvalvoja voi lisätä uusia hahmoja ja varusteita.
+## Järjestelmänvalvojat  **(Ei vielä erotettu tavallisesta käyttäjästä)**
+* Järjestelmänvalvojat näkevät kaikkien käyttijien tiedot, mukaanlukein taistelujoukot. **TOTEUTTAMATTA**
+* Järjestelmänvalvoja voi lisätä uusia hahmoja ja varusteita. **osittain toteuttamatta**
 * Järjestelmänvalvojalla on myös kaikki peruskäyttjän oikeudet.
 
-## Hienommat yhteenvetokyselyt
+## Hienommat yhteenvetokyselyt **TOTEUTTAMATTA**
 * Yhteenvetokyselyillä voisi olla mahdollista laskea hahmojen hyökkäysvoima tai todennäköisimmät statit jollain tasoilla eri tietokantatauluja ja Fire Emblem Wikissä olevia kaavoja käyttäen.
 
 ## Projektin kielet
