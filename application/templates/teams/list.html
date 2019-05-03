@@ -30,7 +30,7 @@
     </form>
     {% for team in teams %}
     <tr>
-        <td></td>
+        <td>{{ team.id }}</td>
         <td>
             <a href="{{ url_for('teams_show', team_id=team.id) }}">{{ team.name }}</a>
         </td>
@@ -41,6 +41,10 @@
         </td>
     </tr>
     {% endfor %}
+    <tr>
+        <td>List sizes:</td>
+        <td>{% for unit_number in unit_numbers %}{{ unit_number }}, {% endfor %}</th>        
+    </tr>
     <tr>
         <th>Units in teams</th>
     </tr>

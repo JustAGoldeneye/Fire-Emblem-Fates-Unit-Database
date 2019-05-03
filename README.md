@@ -1,17 +1,5 @@
 # Fire Emblem Fates -hahmotietokanta
 
-## Huomiota projektin nykyisestä tilasta
-
-Unit-taulun on tarkoitus olla sama kaikille käyttäjille. (Team-taulujen on tarkoitus olla jokaiselle käyttäjälle yksityinen.)
-
-Ominaisuudet, joita en vielä saanut toimimaan:
-* Team-tauluun liittyvien toiminallisuuksien totetuttaminen on kesken, eikä niihin pääse vielä käyttöliittymän kautta käsiksi.
-* Unit-taulun kohteiden päivttäminen ei toimi.
-  * Käytin suurimman osan ajasta viikolla 6 tämän korjaamisen yrittämiseen, mutta en onnistunut saamaan mitään konkreettista aikaan.
-  * Minulla ei ole tällä hetkellä toimivaa ajatusta tämän korjaamiseen.
-  * Edit-painike ja -sivu ovat silti mukana sovelluksessa. Tällä hetkellä kohteen tietojen päivittäminen poistaa muokattavan rivin.
-  * Unitien lisääminen ja poistaminen kuitenkin toimivat.
-
 ## Kirjautuminen
 
 Unitit listaava sivu on nähtävissä ilman kirjautumista.
@@ -36,14 +24,20 @@ salasana
 
 **Tietokantasovelluksen tarkoituksena on pitää kirjaa Fire Emblem Fates -pelin hahmoista.**
 
-Tietokantasovelluksen on tarkoitus antaa käyttäjälle mahdollisuuden suunnitella erilaisia strategioita ja tutkia ja arvioida tilanteita, joissa hän olisikin peliä pelatessaan käyttänyt jotakin erilaista taistelujoukon rakennetta hänen oikeasti käyttämänsä sijasta.
+Tietokantasovelluksen on tarkoitus antaa käyttäjälle mahdollisuuden suunnitella erilaisia strategioita.
 
-Järjestelmän ylläpitäjä voi lisätä järjestelmään uusia hahmoja, kykyjä ja aseita, joiden avulla tavallinen käyttäjä voi suunnitella hahmoille varustuksia ja taistelujoukkoja eri kenttien läpäisyä varten. Käyttäjä voi esimerkiksi etsiä taistelujoukosta hahmon, jolla on korkein fyysinen hyökkäysvoima tai kaikki hahmot jotka selviävät hengissä jonkin vihollisen hyökkäyksestä. Kaikkien hahmojen tiedoista on taas mahdollista katsoa, kenen nopeus kasvaa eniten hahmon kehittyessä tasoja.
+Tietokantaan voi lisätä hahmoja, joista käyttäjä voi tehdä omia joukkoja. Hahmot ovat näkyvissä kaikille käyttäjille, mutta joukot ovat yksityisiä. Käyttäjä voi vertailla hahmojen ominaisuuksi ja tällä tavoin valita sopivimmat hahmot.
 
-Kaikista hahmoista tallennetaan niiden alkuperäiset statit (stat = hahmon tai aseen numeerinen ominaisuus, kuten voima tai nopeus), stattien kasvutodennäköisyydet, luokka (esimerkiksi jousiampuja tai parantaja) ja kyvyt. Aseesta tallennetaan sen vahvuus, tarkkuus ja tyyppi (esimerkiksi miekka tai keihäs). Luokasta tallennetaan sille sallitut asetyypit ja kyvyistä niiden kuvaus. Taistelujoukosta tallennetaan tieto suurimmasta sallitusta hahmojen määrästä.
+Kaikista hahmoista tallennetaan niiden alkuperäiset statit (stat = hahmon numeerinen ominaisuus, kuten voima tai nopeus), stattien kasvutodennäköisyydet ja luokka (esimerkiksi jousiampuja tai parantaja).
 
 ## Toimintoja
 Siirretty [user storyeihin](https://github.com/JustAGoldeneye/Fire-Emblem-Fates-Unit-Database/blob/master/documentation/User%20storyt.md)
 
-## Huomioita projektista kokonaisuutena
-Tiedostan, että suunnitelmassani on mahdollisesti paljon työtä. Jos projektin aikana huomaankin, että työn määrä on liian suuri, saatan jättää osan vähemmän oleellisista tauluista pois, kuten aseet tai taistelujoukot. On myös mahdollista, että saatan vaihtaa pelin Fire Emblem Fates:sta Fire Emblem Heroes:iin, joka on pelimekaniikoiltaan hyvin samanlainen, mutta hieman yksinkertaisempi, jos ajaudun vaikeaan tilanteeseen projektin aikana. Hahmoista tallennettavista attribuuteista ei kuitenkaan ole tarkoitus leikata ja mahdollisuus laskea hahmon todennäköiset statit jollakin tasolla olisi myös tarkoitus pitää mukana. Kuitenkin, jos huomaankin projektin etenevän helposti saatan jopa tehdä jotain ylimääräistä, kuten lisätä luokan kenttä, joka korvaisi taistelujoukon attribuutin suurimmasta sallitusta hahmomäärästä ja tästä suurimmasta sallitusta hahmomäärästä tulisikin luvun attribuutti.
+## Ongelmat
+* Heroku ei toimi
+  * Lokin perusteella ainakin osa ongelmasta näyttäisi aiheutuvan siitä, että joidenkin tietokantasarakkeiden nimissä on isoja kirjaimia, mikä aiheuttaa yhteensopivuusongelmia Postgresin kanssa.
+    * Olen tehtnyt vastaavanalaiseen ongelmaan korjauksen aiemmassa vaiheessa projektia, minkä seurauksena kitjoitin SQL-kyselyissä kaikki viittaukset kaikkia isoja kirjaimia sisältäviin tietokantasarakkeisiin muodossa \"sarakeAB\". Tämä ei kuitenkaan näytä auttavan nykyiseen ongelmaan.
+  * Kirjautuminen ja käyttjätunnuksen luominen toimivat, mutta Unit- ja Teams-sivujen avaaminen aiheuttaa Internal server errorin.
+* Hahmojen lisääminen teameihin ei ole käytössä.
+  * ALoitin tämän ominaisuuden tekemisen liian myöhään ja en saanut sitä ajoissa toimimaan.
+  * Esimerkkiteamien hahmoja pystyy kuitenkin tarkastelemaan.

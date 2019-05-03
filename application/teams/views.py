@@ -9,7 +9,7 @@ from application.units.models import Unit
 @app.route("/teams", methods=["GET"])
 @login_required(role="ADMIN")
 def teams_index():
-    return render_template("teams/list.html", teams = Team.find_users_teams(current_user.id), form = TeamForm(), units = Team.units_in_teams(current_user.id))
+    return render_template("teams/list.html", teams = Team.find_users_teams(current_user.id), form = TeamForm(), units = Team.units_in_teams(current_user.id), unit_numbers = Team.number_of_units_in_teams(current_user.id))
 
 @app.route("/teams/show/<team_id>/", methods=["GET"])
 @login_required(role="ADMIN")
@@ -22,7 +22,7 @@ def teams_create():
     form = TeamForm(request.form)
 
     if not form.validate():
-        return render_template("teams/list.html", teams = Team.find_users_teams(current_user.id), units = Team.units_in_teams(current_user.id), form = form)
+        return render_template("teams/list.html", teams = Team.find_users_teams(current_user.id), units = Team.units_in_teams(current_user.id), unit_numbers = Team.number_of_units_in_teams(current_user.id), form = form)
 
     t  = Team(form.name.data)
     t.account_id = current_user.id
