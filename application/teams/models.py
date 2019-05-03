@@ -34,3 +34,25 @@ class Team(Base):
             result.append(row)
 
         return result
+
+    @staticmethod
+    def find_team(team_id):
+        stmt = text("SELECT * FROM team "
+                    "WHERE id = :teamid")
+
+        res = db.engine.execute(stmt, teamid = team_id)
+
+        for row in res:
+            return row
+
+    @staticmethod
+    def number_of_units_in_team(team_id):
+        stmt = text("SELECT COUNT(team.id) FROM team "
+                    "JOIN team_unit ON team.id = team_unit.team_id "
+                    "JOIN unit ON team_unit.team_id = unit.id "
+                    "WHERE team.id = :teamid")
+
+        res = db.engine.execute(stmt, teamid = team_id)
+
+        for row in res:
+            return row[0]

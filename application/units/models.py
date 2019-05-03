@@ -58,6 +58,7 @@ class Unit(Base):
 
         for row in res:
             return row[0]
+            
 
     #@staticmethod
     #def best_unit_in(stat):

@@ -2,7 +2,7 @@
 
 {% block body %}
 <table>
-    <h1>Units</h1>
+    <h1>Teams</h1>
   {% if current_user.is_authenticated %}
     <b>This table is PRIVATE.</b>
   {% else %}
@@ -28,7 +28,9 @@
     </form>
     {% for team in teams %}
     <tr>
-        <td>{{ team.name }}</td>
+        <td>
+            <a href="{{ url_for('teams_show', team_id=team.id) }}">{{ team.name }}</a>
+        </td>
         <td>
             <form mehtod="POST" action = "{{ url_for('teams_delete', team_id=team.id) }}">
                 <input type="submit" value="Delete"/>

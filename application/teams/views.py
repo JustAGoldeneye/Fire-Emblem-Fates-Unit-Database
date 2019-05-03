@@ -10,6 +10,11 @@ from application.teams.forms import TeamForm
 def teams_index():
     return render_template("teams/list.html", teams = Team.find_users_teams(current_user.id), form = TeamForm())
 
+@app.route("/teams/show/<team_id>/", methods=["GET"])
+@login_required(role="ADMIN")
+def teams_show(team_id):
+    return render_template("teams/show.html", team_id = team_id, team = Team.find_team(team_id), number_of_units = Team.number_of_units_in_team(team_id))
+
 @app.route("/teams/", methods=["POST"])
 @login_required(role="ADMIN")
 def teams_create():
